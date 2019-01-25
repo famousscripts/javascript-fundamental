@@ -1,0 +1,492 @@
+<script>
+  /*   
+  const arr = [1,2,4];
+    array iteration
+    arr.forEach(item => {
+        console.log(item);
+    })
+    */
+
+   /* array filter
+   const filtered = arr.filter(num => num > 5);
+   filtered.forEach(newitem => {
+       console.log(newitem);
+   })
+   */
+
+  /*array map
+  const mapval = arr.map(num => num+1);
+  mapval.forEach(mapitem => {
+      console.log(mapitem);
+  })
+  */
+ /*
+ sum of array value.
+ const sum = arr.reduce((total, value) => total + value, 0);
+ console.log(sum);
+ */
+/*
+const arr = [1, 2, 3, 4, 5, 6];
+
+// at least one element is greater than 4?
+const largeNum = arr.some(num => num > 4);
+console.log(largeNum); // output: true
+
+// at least one element is less than or equal to 0?
+const smallNum = arr.some(num => num <= 0);
+console.log(smallNum); // output: false
+*/
+/*
+This method check if all array's item passed the condition. If passed, it return 'true' otherwise 'false'.
+
+  const arr = [1, 2, 3, 4, 5, 6];
+
+  // all elements are greater than 4
+
+  const greaterFour = arr.every(num => num > 4);
+  console.log(greaterFour); // output: false
+
+  // all elements are less than 10
+
+  const lessTen = arr.every(num => num < 10);
+  console.log(lessTen); // output: true
+
+  8. sort()
+
+This method used to arrange/sort array's item either ascending or descending order.
+
+  const arr = [1, 2, 3, 4, 5, 6];
+  const alpha = ['e', 'a', 'c', 'u', 'y'];
+
+  // sort in descending order
+
+  descOrder = arr.sort((a, b) => a > b ? -1 : 1);
+  console.log(descOrder); // output: [6, 5, 4, 3, 2, 1]
+
+  // sort in ascending order
+
+  ascOrder = alpha.sort((a, b) => a > b ? 1 : -1);
+  console.log(ascOrder); // output: ['a', 'c', 'e', 'u', 'y']
+
+
+  // Slitiing the string into charachter
+
+ const strval = 'ghanshyam';
+ const newStr = Array.from(strval);
+ console.log(newStr);
+ newStr.forEach(stritem => {
+    console.log(stritem);
+ })
+
+
+ // Converting the values into array
+
+ const arrnew = Array.of(2,4,5,7,8)
+ console.log(arrnew); 
+
+ join()
+Joins all elements of an array into a string.
+
+  
+   
+         var arr = new Array("First","Second","Third");
+         
+         var str = arr.join();
+         document.write("str : " + str ); 
+         
+         var str = arr.join(", ");
+         document.write("<br />str : " + str ); 
+         
+         var str = arr.join(" + ");
+         document.write("<br />str : " + str ); 
+ 
+Output
+str : First,Second,Third
+str : First, Second, Third
+str : First + Second + Third 
+
+array.slice( begin [,end] );
+
+
+ var arr11 = ["orange", "mango", "banana", "sugar", "tea"];
+ var newarr = arr11.slice(1,-1);
+ newarr.forEach(itemone => {
+     console.log(itemone);
+ })
+ 
+
+removing the dublicate values -- Type1
+
+const nameval = ['g','a','r','p','a','r'];
+var uniq = [...new Set(nameval)];
+uniq.forEach(itmv => {
+    console.log(itmv);
+})
+
+
+removing the dublicate values -- Type2
+
+let array_with_duplcates = ['DELHI','NEWYORK','DELHI','GOA','MUMBAI','CALIFORNIA','GOA'];
+
+function removeDuplicates(arr){
+    let unique_array = []
+    for(let i = 0;i < arr.length; i++){
+        if(unique_array.indexOf(arr[i]) == -1){
+            unique_array.push(arr[i])
+        }
+    }
+    return unique_array
+}
+
+console.log(removeDuplicates(array_with_duplcates)); // [ 'DELHI', 'NEWYORK', 'GOA', 'MUMBAI', 'CALIFORNIA' ]
+
+var arr = ["orange", "mango", "banana", "sugar", "tea"];  
+var removed = arr.splice(2, 0, "water"); 
+
+o/P : After adding 1: orange,mango,water,banana,sugar,tea 
+
+
+var months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// inserts at 1st index position
+console.log(months);
+// expected output: Array ['Jan', 'Feb', 'March', 'April', 'June']
+
+months.splice(4, 1, 'May');
+// replaces 1 element at 4th index
+console.log(months);
+// expected output: Array ['Jan', 'Feb', 'March', 'April', 'May']
+
+
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var removed = myFish.splice(2, 0, 'drum');
+
+// myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"] 
+// removed is [], no elements removed
+
+
+var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+var removed = myFish.splice(3, 1);
+
+// removed is ["mandarin"]
+// myFish is ["angel", "clown", "drum", "sturgeon"]
+
+
+var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+
+// myFish is ["parrot", "anemone", "blue", "trumpet", "sturgeon"] 
+// removed is ["angel", "clown"]
+
+
+var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
+var removed = myFish.splice(myFish.length - 3, 2);
+
+// myFish is ["parrot", "anemone", "sturgeon"] 
+// removed is ["blue", "trumpet"]
+
+
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var removed = myFish.splice(-2, 1);
+
+// myFish is ["angel", "clown", "sturgeon"] 
+// removed is ["mandarin"]
+
+var a;
+a + 2;  // Evaluates to NaN
+
+
+var n = null;
+console.log(n * 32); // Will log 0 to the console
+
+if (true) {
+  var x = 5;
+}
+console.log(x);  // x is 5
+
+if (true) {
+  let y = 5;
+}
+console.log(y);  // ReferenceError: y is not defined
+
+Example 1
+
+ var x;
+console.log(x === undefined); // true
+x = 3;
+ 
+
+Example 2
+
+var myvar = 'my value';
+ 
+(function() {
+  var myvar;
+  console.log(myvar); // undefined
+  myvar = 'local value';
+})();
+
+ Function declaration 
+
+foo(); // "bar"
+
+function foo() {
+  console.log('bar');
+}
+
+
+
+var baz = function() {
+  console.log('bar2');
+};
+baz(); // OK
+
+
+baz(); // type erro this is not a function
+var baz = function() {
+  console.log('bar2');
+};
+
+Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception. 
+This concept is known as hoisting; variables in JavaScript are in a sense "hoisted" or lifted to the top of the function or statement. 
+However, variables that are hoisted return a value of undefined.
+So even if you declare and initialize after you use or refer to this variable, it still returns undefined.
+
+Function hoistingSection:
+For functions, only the function declaration gets hoisted to the top and not the function expression.
+
+// Function declaration
+
+foo(); // "bar"
+
+function foo() {
+  console.log('bar');
+}
+
+
+// Function expression
+
+baz(); // TypeError: baz is not a function
+
+var baz = function() {
+  console.log('bar2');
+};
+
+
+
+// Finding the largest value from the array
+
+var arr = [3, 6, 2, 56, 32, 5, 89, 32];
+var largest = arr[0];
+
+for (var i = 0; i < arr.length; i++) {
+    if (largest < arr[i] ) {
+        largest = arr[i];
+    }
+}
+console.log(largest);
+
+
+// Finding the smallest value from the array
+var arr = [3, 6, 2, 56, 32, 5, 89, 32];
+var smallest = arr[0];
+
+for (var i = 0; i < arr.length; i++) {
+    if (smallest > arr[i] ) {
+        smallest = arr[i];
+    }
+}
+console.log(largest);
+
+
+// One alternative also 
+
+var numbers = [1, 2, 3, 4];
+Math.max.apply(null, numbers) // 4
+Math.min.apply(null, numbers) // 1
+
+
+var numbers = [1, 2, 3, 4];
+Math.max(...numbers) // 4
+Math.min(...numbers) // 1
+
+A simpler, ES2015 way of accomplishing this is with the new spread operator.
+
+//Array to string
+
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  fruits.toString();
+
+
+  String to array 
+
+   var str = "How are you doing today?";
+  var res = str.split(" ");
+
+// String reverse 
+function reverse(str){
+  let reversed = "";
+  for(let char123 of str){
+    reversed = char123 + reversed;
+  }
+  console.log(reversed);
+}
+
+reverse("ABC");
+
+function reverse(str){
+  console.log(str.split("").reverse().join(""));
+}
+reverse('PQR');
+
+function reverse(str){
+  console.log([...str].reverse().join(''));
+}
+reverse('GHAN');
+
+By reduce method
+
+function reverse(str){
+  return str.split("").reduce((rev, char)=> char + rev, ''); 
+}
+
+
+// Json to array
+var strjson  = {"0":"1","1":"2","2":"3","3":"4"};
+var arr32 = Object.values(strjson);
+console.log(arr32);
+
+// Array to json
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var jsonString = JSON.stringify(fruits);
+console.log(jsonString);
+
+// Check prime no
+function isPrime(num) {
+  for(var i = 2; i < num; i++)
+    if(num % i === 0) return false;
+  console.log("yes prime");
+}
+
+isPrime(17);
+
+
+// last index of string
+var myString="JavascriptQuestions";
+console.log(myString.length-1);
+
+Explain Event bubbling and Event Capturing in JavaScript?
+A: 
+Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the elements receive the event.
+
+With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+
+Capturing is also called "trickling", which helps remember the propagation order:
+
+trickle down, bubble up
+
+Back in the old days, Netscape advocated event capturing, while Microsoft promoted event bubbling. Both are part of the W3C Document Object Model Events standard (2000).
+
+IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both. On the other hand, the performance of event bubbling may be slightly lower for complex DOMs.
+
+We can use the addEventListener(type, listener, useCapture) to register event handlers for in either bubbling (default) or capturing mode. To use the capturing model pass the third argument as true.
+
+Example
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+In the structure above, assume that a click event occurred in the li element.
+
+In capturing model, the event will be handled by the div first (click event handlers in the div will fire first), then in the ul, then at the last in the target element, li.
+
+In the bubbling model, the opposite will happen: the event will be first handled by the li, then by the ul, and at last by the div element.
+
+What is Javascript BOM?
+BOM stands for “Browser Object Modal” that allows Javascript to ‘talk’ to the browser, no standards, modern browsers implement similar BOMS – window, screen, location, 
+history, navigator, timing, cookies.
+
+
+//How to calculate Fibonacci numbers in JavaScript?
+Calculating Fibonacci series in JavaScript
+Fibonacci numbers are a sequence of numbers where each value is the sum of the previous two, starting with 0 and 1. The first few values are 0, 1, 1, 2, 3, 5, 8, 13 ,…,
+
+function fib(n) {
+	var a=0, b=1;
+	for (var i=0; i < n; i++) {
+		var temp = a+b; 
+		a = b;
+		b = temp;
+	}
+	return a;
+}
+
+
+How to add/remove properties to object dynamically in Javascript?
+
+A:  let user = new Object();
+    // adding a property
+    user.name='Anil';
+    user.age  =25;
+    console.log(user);
+    delete user.age;
+    console.log(user);
+
+
+Q: How to clone an object in Javascript?
+A: Object.assign() method is used for cloning an object in Javascript.Here is sample usage
+
+	var x = {myProp: "value"};
+    var y = Object.assign({}, x); 
+    
+Q: List different ways of empty an array in Javascript?
+In Javascript, there are many ways to empty an array in Javascript, below we have listed 4 major
+
+By assigning an empty array.
+
+var arr1 =[1,4,5,6];
+arr1=[];
+By assigning array length to 0.
+
+var arr2 =[1,4,5,6];
+arr2.length=0;
+By poping the elements of the array.
+
+var arr2 =[1,4,5,6];
+while(arr.length > 0) {
+    arr.pop();
+}
+By using .splice() .
+
+var arr =[1,4,5,6];
+arr.splice(0,arr.length)  
+
+
+Q: Explain few difference between null, undefined or undeclared JavaScript variable?
+Null is a value that can be assigned to a variable or an object.
+
+Undefined means a variable has been declared but no value is assigned to it. This type of variable is declared itself to be undefined.
+
+Undeclared means the variable has declared without any datatype.
+
+Null, Undefined are primitive data types whereas Undeclared is not a primitive data type.
+
+
+Q: How to redirect a page to another page in Javascript?
+There are several ways to redirect page to another page in JavaScript. These are:
+
+Using location.href: It is the first approach to redirect page. In this, we can go back to access the original document. Syntax:window.location.href =“https://www.onlineinterviewquestions.com/”
+Using location.replace: Another approach to redirect page. In this, it is not possible to navigate back to the original document by clicking on the back button as it removes the URL of the original document.
+ Syntax: window.location.replace(" https://www.onlineinterviewquestions.com/;");
+
+Q : What are the different types of errors available in JavaScript?
+There are three types of errors available in JavaScript
+
+Load time errors: Errors which come up when loading a web page like improper syntax errors are known as Load-time errors and it generates the errors dynamically.
+Run time errors: Errors that come due to misuse of the command inside the HTML language.
+Logical Errors: These are the errors that occur due to the bad logic performed on a function which is having a 
+*/
+</script>
